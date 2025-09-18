@@ -40,7 +40,7 @@ async function getKey(){
     apiKey = document.getElementById('keyinput').value;
 }
 
-keybutton.addEventListener('click', getKey);
+keyButton.addEventListener('click', getKey);
 sendButton.addEventListener('click', sendMessage);
 inputField.addEventListener('keypress', function (e) {
     if (e.key === 'Enter') sendMessage();
