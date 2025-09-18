@@ -1,5 +1,5 @@
 let apiKey = ""
-const keyButton = document.getElementByIf('sendKey');
+const keyButton = document.getElementById('sendKey');
 const chatDiv = document.getElementById('chat');
 const inputField = document.getElementById('input');
 const sendButton = document.getElementById('send');
