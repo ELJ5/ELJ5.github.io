@@ -1,4 +1,5 @@
-const apiKey = document.getElementById('keyinput');
+let apiKey = ""
+const keyButton = document.getElementByIf('sendKey');
 const chatDiv = document.getElementById('chat');
 const inputField = document.getElementById('input');
 const sendButton = document.getElementById('send');
@@ -35,7 +36,11 @@ async function sendMessage() {
         chatDiv.innerHTML += `<p><strong>Error:</strong> ${error.message}</p>`;
     }
 }
+async function getKey(){
+    apiKey = document.getElementById('keyinput').value;
+}
 
+keybutton.addEventListener('click', getKey);
 sendButton.addEventListener('click', sendMessage);
 inputField.addEventListener('keypress', function (e) {
     if (e.key === 'Enter') sendMessage();
